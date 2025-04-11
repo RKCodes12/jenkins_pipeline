@@ -1,17 +1,21 @@
 pipeline {
-    agent any
+    agent 
+     node {
+            label 'AGENT-1'
+        }
 
     tools {
         // Tools configuration
-        maven 'Maven3'
-        jdk 'JavaJDK11'
+        maven 'Maven_S3'
+        jdk 'java_S3'
     }
 
     stages {
         stage('Fetch code') {
             // Fetch code from VCM (GitHub)
             steps {
-                git branch: 'main', url: 'https://github.com/adigopulabharath/vprofile-project.git'
+                echo 'fetching code form my github account'
+                //git branch: 'main', url: 'https://github.com/RKCodes12/jenkins_pipeline.git'
             }
         }
 
