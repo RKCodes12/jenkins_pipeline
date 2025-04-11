@@ -1,9 +1,6 @@
 pipeline {
-    agent 
-     node {
-            label 'AGENT-1'
-        }
-
+    agent any
+    
     tools {
         // Tools configuration
         maven 'Maven_S3'
