@@ -12,7 +12,7 @@ pipeline {
             // Fetch code from VCM (GitHub)
             steps {
                 echo 'fetching code form my github account'
-                //git branch: 'main', url: 'https://github.com/RKCodes12/jenkins_pipeline.git'
+                git branch: 'main', url: 'https://github.com/RKCodes12/jenkins_pipeline.git'
             }
         }
 
